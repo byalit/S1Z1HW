@@ -14,7 +14,6 @@ let n = 7;
 let summary = 1
 while (n > 0) {
     summary *= n--;
-    //console.log(summary);
 }
 console.log("2) 7 silnia = " + summary);
 
@@ -53,11 +52,9 @@ console.log("5) Najdłuższy napis to: " + valueArray5[longestindex]);
 // 6) Choose all the indexes on the highest value from the given array. [1,6,23,8,4,98,3,7,3,98,4,98].
 let valueArray6 = [1, 6, 23, 8, 4, 98, 3, 7, 3, 98, 4, 98];
 let highval6 = valueArray6[0];
-//szukanie największej wartości
 for (let i = 1; i < valueArray6.length; i++) {
     if (valueArray6[i] > highval6) highval6 = valueArray6[i];
 }
-//wydruk indexów o najwyższej wartości
 console.log("6) Indexy najwyższej wartości: ");
 for (let i = 1; i < valueArray6.length; i++) {
     if (valueArray6[i] == highval6) console.log(i);
@@ -95,13 +92,12 @@ console.log("8) Średnia liczb parzystych indexów to: " + avg8);
 let valueArray9 = [1, 6, 23, 8, 4, 98, 3, 7, 3, 98, 4, 98];
 let sum9 = 0;
 for (let i = 0; i < valueArray9.length; i++) {
-    // if(valueArray9[i] % 2 == 0) {
-    //     sum9 += valueArray9[i];     
-    // }
-    // else {
-    //     sum9 -= valueArray9[i];
-    // }
+    if (valueArray9[i] % 2 == 0) {
+        sum9 += valueArray9[i];
+    }
+    else {
+        sum9 -= valueArray9[i];
+    }
 
-    (valueArray9[i] % 2 == 0) ? sum9 += valueArray9[i] : sum9 -= valueArray9[i];   //wersja skrócona
 }
 console.log("9) Suma parzystych po odjęciu nieparzystych to: " + sum9);
